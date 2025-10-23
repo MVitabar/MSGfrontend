@@ -51,13 +51,13 @@ dependencies:
   country_pickers: ^3.0.1
 
   # Notifications (optional, for push notifications in messaging)
-  flutter_local_notifications: ^18.0.1
+  flutter_local_notifications: ^19.5.0
 
   # Multimedia support - Image picker from camera/gallery
   image_picker: ^1.1.2
 
   # File picker for selecting documents, videos, etc. (stable version for Windows)
-  file_picker: ^6.2.1
+  file_picker: ^10.3.3
 
   # Video player for displaying videos
   video_player: ^2.9.1
@@ -75,13 +75,13 @@ dependencies:
   path_provider: ^2.1.4
 
   # Permission handler for camera, storage, etc. (stable version for Windows)
-  permission_handler: ^11.2.0
+  permission_handler: ^12.0.1
 
   # Audio player for voice messages (compatible version for Windows)
-  audioplayers: ^5.2.1
+  audioplayers: ^6.5.1
 
   # Record audio for voice messages (compatible version for Windows)
-  record: ^4.4.0
+  record: ^6.1.2
 
 dev_dependencies:
   flutter_test:

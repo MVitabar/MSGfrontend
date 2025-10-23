@@ -9,6 +9,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:image/image.dart' as img;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import '../models/message.dart';
+import '../config/app_config.dart';
 import 'chat_service.dart';
 
 /// Wrapper para manejar tanto File como XFile
@@ -37,7 +38,7 @@ class WebFileWrapper {
 }
 
 class MediaService {
-  static const String baseUrl = 'http://localhost:3000';
+  static const String baseUrl = AppConfig.baseUrl;
   final ImagePicker _imagePicker = ImagePicker();
 
   /// Solicitar permisos necesarios

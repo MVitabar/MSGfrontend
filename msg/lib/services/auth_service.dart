@@ -3,10 +3,11 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/auth.dart';
 import '../models/user.dart';
+import '../config/app_config.dart';
 import 'socket_service.dart'; // Importar SocketService
 
 class AuthService {
-  static const String baseUrl = 'http://localhost:3000/auth'; // Cambia si tu backend tiene otra URL
+  static const String baseUrl = AppConfig.authUrl;
   final SocketService _socketService = SocketService(); // Instancia para desconectar
 
   // Registro
@@ -95,7 +96,7 @@ class AuthService {
       // Intentar obtener del backend primero
       print('getCurrentUser - Intentando obtener usuario del backend...');
       final response = await http.get(
-        Uri.parse('http://localhost:3000/users/me'),
+        Uri.parse(AppConfig.usersUrl + '/me'),
         headers: {
           'Authorization': 'Bearer $token',
           'Content-Type': 'application/json',

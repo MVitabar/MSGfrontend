@@ -4,10 +4,11 @@ import 'package:http/http.dart' as http;
 import '../models/chat.dart';
 import '../models/message.dart';
 import '../models/user.dart';
+import '../config/app_config.dart';
 import 'file_service.dart';
 
 class ChatService {
-  static const String baseUrl = 'http://localhost:3000'; // Base URL del backend
+  static const String baseUrl = AppConfig.baseUrl;
 
   // Obtener lista de chats del usuario
   Future<List<Chat>> getChats(String token) async {

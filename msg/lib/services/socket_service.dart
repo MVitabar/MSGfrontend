@@ -1,5 +1,6 @@
 import 'package:socket_io_client/socket_io_client.dart' as IO;
 import '../models/message.dart';
+import '../config/app_config.dart';
 
 class SocketService {
   late IO.Socket socket;
@@ -10,7 +11,7 @@ class SocketService {
   Function(String)? onMessageRead; // New callback for message read status updates
 
   void connect(String token) {
-    socket = IO.io('http://localhost:3000', <String, dynamic>{
+    socket = IO.io(AppConfig.socketUrl, <String, dynamic>{
       'transports': ['websocket'],
       'autoConnect': false,
       'auth': {'token': token},

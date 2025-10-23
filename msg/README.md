@@ -29,6 +29,7 @@ Aplicación de mensajería moderna desarrollada con Flutter que incluye soporte 
 ### **Frontend Structure**
 ```
 lib/
+├── config/          # ⚙️ Configuración centralizada (AppConfig)
 ├── models/          # Modelos de datos (Message, Chat, User)
 ├── services/        # Servicios (Auth, Chat, File Upload)
 ├── widgets/         # Widgets reutilizables multimedia
@@ -44,7 +45,20 @@ flutter pub get
 ```
 
 ### **2. Configurar backend:**
-Asegúrate de que el backend NestJS esté ejecutándose en `localhost:3000`
+El proyecto ahora usa configuración centralizada. Para cambiar entre entornos:
+
+**Producción (actual):**
+```dart
+// lib/config/app_config.dart
+static const String baseUrl = 'https://msgbackend-production.up.railway.app';
+```
+
+**Desarrollo local:**
+```dart
+// lib/config/app_config.dart
+static const String baseUrl = 'http://localhost:3000';
+static const bool debugMode = true;
+```
 
 ### **3. Ejecutar la aplicación:**
 

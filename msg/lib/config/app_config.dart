@@ -1,6 +1,6 @@
 class AppConfig {
   // Configuración de URLs del backend
-  static const String baseUrl = 'https://msgbackend-production.up.railway.app';
+  static const String baseUrl = 'https://dynamic-dedication-production.up.railway.app';
   static const String authUrl = '$baseUrl/auth';
   static const String usersUrl = '$baseUrl/users';
   static const String chatsUrl = '$baseUrl/chats';

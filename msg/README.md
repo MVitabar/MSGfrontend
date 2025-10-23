@@ -50,7 +50,7 @@ El proyecto ahora usa configuración centralizada. Para cambiar entre entornos:
 **Producción (actual):**
 ```dart
 // lib/config/app_config.dart
-static const String baseUrl = 'https://msgbackend-production.up.railway.app';
+static const String baseUrl = 'https://dynamic-dedication-production.up.railway.app';
 ```
 
 **Desarrollo local:**

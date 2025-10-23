@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Configuración para permitir conexiones HTTPS a dominios específicos -->
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- Permitir conexiones HTTPS al dominio del backend -->
+        <domain includeSubdomains="true">dynamic-dedication-production.up.railway.app</domain>
+        <domain includeSubdomains="true">railway.app</domain>
+
+        <!-- Configuración de trust para certificados -->
+        <trust-anchors>
+            <certificates src="system"/>
+            <certificates src="user"/>
+        </trust-anchors>
+    </domain-config>
+
+    <!-- Configuración por defecto: solo HTTPS -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>
